@@ -16,7 +16,7 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: home },
+  { path: '/', directives: home },
   { path: '/home', component: home },
   { path: '/produce', component: produce },
   { path: '/service', component: service },

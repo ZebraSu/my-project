@@ -1,18 +1,21 @@
 <template>
-<div class="container">
-  <div class="nav-bar">
-    <div class="nav-item" v-for="item in items">
-      <router-link  :to="item.link">{{item.text}}</router-link>
-      <transition name="slider-line">
-          <div  class="line"></div>
-      </transition>
+  <div class="page">
+    <div class="container">
+      <div class="nav-bar">
+        <div class="nav-item" v-for="item in items">
+          <router-link  :to="item.link">{{item.text}}</router-link>
+          <transition name="slider-line">
+            <div  class="line"></div>
+          </transition>
+        </div>
+      </div>
     </div>
+    <router-view></router-view>
   </div>
-  <router-view></router-view>
-</div>
 </template>
 
 <script>
+  import banner from "../src/components/banner/banner";
 export default {
   name: 'app',
   data() {
@@ -27,14 +30,17 @@ export default {
       ]
     }
   },
+  methods:{
+
+  },
+  components:{
+    banner
+  }
 }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .container{
-    width: 1170px;
-    margin: 0 auto;
-  }
+  @import "../src/commond/stylus/minin"
 
   .nav-bar{
     font-size:0px;

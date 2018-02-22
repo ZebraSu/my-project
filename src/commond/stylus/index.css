@@ -28,3 +28,8 @@ html {
     transform: scaleY(0.5);
   }
 }
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
